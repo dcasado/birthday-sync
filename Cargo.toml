@@ -7,7 +7,7 @@ edition = "2021"
 
 [dependencies]
 reqwest = { version = "0.12", features = ["blocking"] }
-minidom = { version = "0.15" }
+minidom = { version = "0.16" }
 
 [dependencies.ical]
 version = "0.10"
