@@ -14,6 +14,10 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build
       run: cargo build --release --bin birthday-sync
+    - name: Add tag name to bin
+      if: startsWith(github.ref, 'refs/tags/')
+      run: |
+        mv target/release/birthday-sync target/release/birthday-sync-${{ github.ref_name }}
     - name: Release
       uses: softprops/action-gh-release@v2
       if: startsWith(github.ref, 'refs/tags/')
