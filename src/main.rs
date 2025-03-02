@@ -5,12 +5,17 @@ use birthday_sync::{caldav::create_events, carddav::get_contacts, settings::get_
 fn main() {
     let args: Vec<String> = env::args().collect();
 
-    let flag = &args[1];
+    if args.len() == 2 {
+        let flag = &args[1];
 
-    if flag == "--version" {
-        let version = env::var("CARGO_PKG_VERSION").unwrap();
-        println!("{}", version);
-        process::exit(0);
+        if flag == "--version" {
+            let version = env!("CARGO_PKG_VERSION");
+            println!("{}", version);
+            process::exit(0);
+        } else {
+            println!("Flag \"{}\" not recognized", flag);
+            process::exit(1);
+        }
     }
 
     let settings = get_settings().expect("Failed to get settings");
