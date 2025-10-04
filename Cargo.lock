@@ -501,9 +501,9 @@ checksum = "6877bb514081ee2a7ff5ef9de3281f14a4dd4bceac4c09388074a6b5df8a139a"
 
 [[package]]
 name = "minidom"
-version = "0.16.0"
+version = "0.17.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e394a0e3c7ccc2daea3dffabe82f09857b6b510cb25af87d54bf3e910ac1642d"
+checksum = "b1d0766d3b25519bd1462d4ca35480e1efabe19727bc4c269aba3b255c0a7a66"
 dependencies = [
  "rxml",
 ]
@@ -760,11 +760,12 @@ checksum = "f7c45b9784283f1b2e7fb61b42047c2fd678ef0960d4f6f1eba131594cc369d4"
 
 [[package]]
 name = "rxml"
-version = "0.11.1"
+version = "0.13.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "65bc94b580d0f5a6b7a2d604e597513d3c673154b52ddeccd1d5c32360d945ee"
+checksum = "4a0e1e3e8d764b5f8fd6e4620caa2b4aeca7c1ea9016186c65a7ee5c81b0f6c7"
 dependencies = [
  "bytes",
+ "futures-core",
  "rxml_validation",
 ]
 
